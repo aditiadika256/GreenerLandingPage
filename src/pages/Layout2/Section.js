@@ -43,10 +43,6 @@ class Section extends Component {
                                 loop: true,
                               }}
                             /></span></h1>
-
-                      <p className="text-white-50 mt-4 f-20">Vestibulum egestas magna ut aliquet sodales nunc
-                                    fermentum <br /> ligula
-                                    quis tidunt vitae massa.</p>
                       <div className="mt-4 pt-2">
                         <Link to="#" className="btn btn-primary mr-3">Contact Us</Link>
                         <Link to="#" className="video-play-icon text-white" onClick={this.openModal}><i className="mdi mdi-play-circle-outline text-white mr-2"></i>Watch Intro Video</Link>
