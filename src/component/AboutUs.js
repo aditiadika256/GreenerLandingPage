@@ -3,7 +3,7 @@ import { Col, Container, Row } from "reactstrap";
 
 import { Link } from "react-router-dom";
 
-import Img1 from '../assets/images/greener.id_1.png';
+import Img1 from '../assets/images/GreenerMockUp.png';
 
 export default class AboutUs extends Component {
   constructor(props) {
@@ -14,15 +14,15 @@ export default class AboutUs extends Component {
           id: '1',
           extraclass: '',
           icon: 'mdi-leaf',
-          title: "Renewable energy",
-          description: 'Greener is a technology company committed to building a more sustainable future'
+          title: "Planet Power",
+          description: 'Healthy crops are the superheroes of the environmental world.'
         },
         {
           id: '2',
           extraclass: 'pt-3',
           icon: 'mdi-solar-power',
-          title: "Energy efficiency",
-          description: 'Greener is a technology company that is committed to making energy more efficient.'
+          title: "Quality",
+          description: "It's not just about quantity it's about quality you can savor."
         },
         {
           id: '3',
@@ -73,7 +73,7 @@ export default class AboutUs extends Component {
                 <Col lg={6}>
                   <div className="pr-4 mt-4">
                     <p className="text-uppercase">why us ? </p>
-                    <h3>Make this world more green and better</h3>
+                    <h3>Unlock the Secrets of Crop Health: From Bountiful Harvests to a Thriving Planet</h3>
                     <p className="text-muted mt-3">Greener, as a driving force for change towards sustainability in Indonesia, understands 
                     that the challenges of climate change and land degradation require a holistic approach. Therefore, Greener not only 
                     focuses on technology development, but is also committed to building strong partnerships and collaboration with various 

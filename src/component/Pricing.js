@@ -16,50 +16,50 @@ export default class Pricing extends Component {
       pricing: [
         {
           id: 1,
-          title: "Solar Panels",
-          description: 'For sustainable agriculture by providing a clean and renewable energy source for various agricultural operations.',
-          icon: SolarPanel,
+          title: "Starter",
+          description: 'Ideal for budding plant parents looking for a helping hand.',
+          icon: 'mdi-account',
           titlePrimary: false,
-          regularprice: 'Rp.950.000',
-          saleprice: 'Rp.699.000',
+          regularprice: 'Rp.120.000',
+          saleprice: 'Rp.79.000',
           pricingTag: false,
           child: [
-            { title: 'Peak Power (Pmax) ', btitle: ": 120W", icon: "mdi-checkbox-marked-circle text-success" },
-            { title: 'Cell Efficiency ', btitle: ": 21.5%", icon: "mdi-checkbox-marked-circle text-success" },
-            { title: 'Max System Voltage ', btitle: ": 1000V", icon: "mdi-checkbox-marked-circle text-success" },
-            { title: 'Dimension(cm) ', btitle: ": 100x67x3", icon: "mdi-checkbox-marked-circle text-success" },
+            { btitle: 'Plant', title: "Detection", icon: "mdi-checkbox-marked-circle text-success" },
+            { btitle: 'Measurement', title: "of plant condition", icon: "mdi-checkbox-marked-circle text-success" },
+            { btitle: 'Identify', title: "plant diseases", icon: "mdi-close-circle text-danger" },
+            { btitle: 'Care', title: "recommendations", icon: "mdi-close-circle text-danger" },
           ],
         },
         {
           id: 2,
-          title: "NDVI Cam Package",
+          title: "Personal",
           titlePrimary: true,
-          description: 'Used to detect disease and plant health based on the vegetation index, which can then be used to dose fertilizer.',
-          icon: ndvi,
-          regularprice: 'Rp.600.000',
-          saleprice: 'Rp.449.000',
+          description: 'Plant pros and passionate green thumbs who want ultimate control and confidence.',
+          icon: 'mdi-account-multiple text-primary',
+          regularprice: 'Rp.150.000',
+          saleprice: 'Rp.99.000',
           pricingTag: true,
           child: [
-            { title: '10 ', btitle: "multispectral bands at 1.6 MP each", icon: "mdi-checkbox-marked-circle text-success" },
-            { title: 'sharper imagery ', btitle: ": Panchromatic band for sharper imagery", icon: "mdi-checkbox-marked-circle text-success" },
-            { title: 'Drone', btitle: "included", icon: "mdi-checkbox-marked-circle text-success" },
-            { title: 'Apps ', btitle: ": Monitoring System", icon: "mdi-close-circle text-danger" },
+            { btitle: 'Plant', title: "Detection", icon: "mdi-checkbox-marked-circle text-success" },
+            { btitle: 'Measurement', title: "of plant condition", icon: "mdi-checkbox-marked-circle text-success" },
+            { btitle: 'Identify', title: "plant diseases", icon: "mdi-close-circle text-success" },
+            { btitle: 'Care', title: "recommendations", icon: "mdi-close-circle text-danger" },
           ],
         },
         {
           id: 3,
-          title: "Wind Turbine",
-          description: 'For sustainable agriculture by providing a clean and renewable energy source for various agricultural operations.',
+          title: "Ultimate",
+          description: 'Semper urna veal tempus pharetra elit habisse platea dictumst.',
           titlePrimary: false,
-          icon: WindTurbine,
-          regularprice: 'Rp.1.300.000',
-          saleprice: 'Rp.999.000',
+          icon: 'mdi-account-multiple-plus',
+          regularprice: 'Rp.200.000',
+          saleprice: 'Rp.129.000',
           pricingTag: false,
           child: [
-            { title: 'Power ', btitle: " : Target Audience", icon: "mdi-checkbox-marked-circle text-success" },
-            { title: 'Voltage ', btitle: " : User Account", icon: "mdi-checkbox-marked-circle text-success" },
-            { title: 'Blade/material ', btitle: " : 5/Nylon Fiber", icon: "mdi-close-circle text-success" },
-            { title: 'Generator ', btitle: " : three-phase permanent magnet AC generator", icon: "mdi-close-circle text-success" },
+            { btitle: 'Plant', title: "Detection", icon: "mdi-checkbox-marked-circle text-success" },
+            { btitle: 'Measurement', title: "of plant condition", icon: "mdi-checkbox-marked-circle text-success" },
+            { btitle: 'Identify', title: "plant diseases", icon: "mdi-close-circle text-success" },
+            { btitle: 'Care', title: "recommendations", icon: "mdi-close-circle text-success" },
           ],
         },
       ],
@@ -89,7 +89,7 @@ export default class Pricing extends Component {
                       <div className="pricing-badge"><span className="badge">Featured</span> </div>
                     )}
 
-                    <img src={item.icon} height={100}></img>
+                    <i className={"h1 mdi " + item.icon}></i>
                     {(item.titlePrimary === true) ?
                       <h4 className="f-20 text-primary">{item.title}</h4>
                       :
@@ -100,14 +100,14 @@ export default class Pricing extends Component {
                       <p className="mb-2 f-18">Features</p>
                       {item.child.map((linkItem, linkkey) => (
                         <p className="mb-2" key={linkkey}><i
-                          className={"mdi " + linkItem.icon + " f-18 mr-2"}></i><b>{linkItem.title}</b> {linkItem.btitle}</p>
-                      ))}
+                          className={"mdi " + linkItem.icon + " f-18 mr-2"}></i><b>{linkItem.btitle}</b> {linkItem.title}</p>
+                      ))} 
                     </div>
                     <p className="mt-4 pt-2 text-muted">{item.description}
                     </p>
                     <div className="pricing-plan mt-4 pt-2">
                       <h4 className="text-muted"><s> {item.regularprice}</s> <span className="plan pl-3 text-dark">{item.saleprice}</span></h4>
-                      
+                      <p className="text-muted mb-0">Per Month</p>
                     </div>
                     <div className="mt-4 pt-3">
                       <Link to="#" className="btn btn-primary btn-rounded">Purchase Now</Link>
